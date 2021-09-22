@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    <title>الاختبار الاول</title>
+    <link rel="stylesheet" href="style tests.css" />
+    <script src="https://kit.fontawesome.com/fe854526ee.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="start_btn"><button>بدأ الاختبار</button></div>
+
+    <div class="info_box">
+        <div class="info-title"><span>بعض الملاحظات قبل بدأ الأختبار</span></div>
+        <div class="info-list">
+            <div class="info">1. سيكون لديك <span>وقت محدد</span> لكل سؤال</div>
+            <div class="info">2. بمجرد تحديد إجابتك ، لا يمكن التراجع عنها.</div>
+            <div class="info">3. لا يمكنك تحديد أي خيار بمجرد انتهاء الوقت.</div>
+            <div class="info">4.لا يمكنك الخروج أثناء الأختبار.</div>
+            <div class="info">5. ستحصل على درجتك في نهاية الاختبار    .</div>
+        </div>
+        <div class="buttons">
+            <button class="quit">خروج</button>
+            <button class="restart">استمرار</button>
+        </div>
+    </div>
+
+    <div class="quiz_box">
+        <header>
+            <div class="title">الأختبار الأول علي الفصل الأول من الباب الأول</div>
+            <div class="timer">
+                <div class="time_left_txt">الوقت المتبقي</div>
+                <div class="timer_sec">15</div>
+            </div>
+            <div class="time_line"></div>
+        </header>
+        <section>
+            <div class="que_text"></div>
+            <div class="option_list"></div>
+        </section>
+
+        <footer>
+            <div class="total_que"></div>
+            <button class="next_btn">السؤال التالي</button>
+        </footer>
+    </div>
+
+    <div class="result_box">
+        <div class="icon">
+            <i class="fas fa-crown"></i>
+        </div>
+        <div class="complete_text">لقد انتهي الاختبار</div>
+        <div class="score_text"></div>
+        <div class="buttons">
+            <button class="restart">أعادة الاختبار</button>
+            <button class="quit">خروج</button>
+        </div>
+    </div>
+
+    <script>
+      function loca() {
+        window.location.href="Physics.html";
+      }
+    let questions = [
+  {
+    numb: 1,
+    question: "وحدة قياس الكتلة حسب النظام الدولي ؟ (درجة) ",
+    answer: "كجم",
+    options: ["جم", "باوند", "رطل", "كجم"],
+    grade:1,
+    time:15,
+  },
+  {
+    numb: 2,
+    question: "من الوحدات التي لا تشتق بدلالة وحدات أخري ؟ (درجة)",
+    answer: "النيوتن",
+    options: ["الكلفن", "النيوتن", "الجول", "الوات"],
+    grade:1,
+    time:15,
+  },
+  {
+    numb: 3,
+    question: "وحدة قياس الكثافة هي ؟ (درجة)",
+    answer: "Kg.m-3",
+    options: ["Kg.m<sup>-1</sup>", "Kg.m", "Kg.m<sup>-2</sup>", "Kg.m<sup>-3</sup>"],
+    grade:1,
+    time:15,
+  },
+  {
+    numb: 4,
+    question: "الكميات التالية اساسية ماعدا كمية واحدة مشتقة ؟(درجة)",
+    answer: "السرعة",
+    options: ["السرعة", "الزمن", "الكتلة", "الطول"],
+    grade:1,
+    time:15,
+  },
+  {
+    numb: 5,
+    question: "اتخذ الانسان في الماضي كمقياس للزمن؟(درجة)",
+    answer: "جميع ما سبق",
+    options: ["شروق الشمس", "غروب الشمس", "دورة القمر", "جميع ما سبق"],
+    grade:1,
+    time:15,
+  },
+  {
+    numb: 6,
+    question: "عدد الوحدات الأساسية في النظام الدولي ؟(درجة)",
+    answer: "سبعة",
+    options: ["ثلاثة", "خمسة", "سبعة", "تسعة"],
+    grade:1,
+    time:15,
+  },
+  {
+    numb: 7,
+    question: "المللي جرام=....كيلوجرام ؟(درجة)",
+    answer: "10-6",
+    options: ["10<sup>-3</sup>", "10<sup>-2</sup>", "10<sup>3</sup>", "10<sup>-6</sup>"],
+    grade:1,
+    time:15,
+  },
+  {
+    numb: 8,
+    question: "المقدار 10<sup>5</sup>يساوي ؟(درجة)",
+    answer: "100000",
+    options: ["0.0001", "10000", "0.00001", "100000"],
+    grade:1,
+    time:15,
+  },
+  {
+    numb: 9,
+    question: "وحدة قياس شدة التيار ؟(درجة)",
+    answer: "الأمبير",
+    options: ["جول", "وات", "فولت", "الأمبير"],
+    grade:1,
+    time:15,
+  },
+  {
+    numb: 10,
+    question: "إذا كانت x=yz وصيغة ابعاد x هي M L T<sup>-2</sup> وصيغة ابعاد y هي M<sup>0</sup> L T<sup>-2</sup> فإن صيغة ابعاد z  هي ؟(درجة)",
+    answer: "M L0 T0",
+    options: ["M L T", "M<sup>-2</sup> L T", "M<sup>0</sup> L T", "M L<sup>0</sup> T<sup>0</sup>"],
+    grade:1,
+    time:30,
+  },
+];
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
